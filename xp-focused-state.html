@@ -85,8 +85,8 @@ It extends the native html `template`.
                 var self = this;
                 if (arguments.length < 2) { return; }
                 if (self.contextObserver) { self.contextObserver.disconnect(); }
-                if (pre) { XP.unlisten(pre, {blur: self.handleBlurBinded, focus: self.handleFocusBinded}); }
-                if (post) { XP.listen(post, {blur: self.handleBlurBinded, focus: self.handleFocusBinded}); }
+                if (pre) { XP.unlisten(pre, {blur: self.handleBlurBound, focus: self.handleFocusBound}); }
+                if (post) { XP.listen(post, {blur: self.handleBlurBound, focus: self.handleFocusBound}); }
                 self.mutated();
             },
 
@@ -111,8 +111,8 @@ It extends the native html `template`.
             // LISTENER
             ready: function () {
                 var self = this;
-                self.handleBlurBinded  = self.handleBlur.bind(self);
-                self.handleFocusBinded = self.handleFocus.bind(self);
+                self.handleBlurBound  = self.handleBlur.bind(self);
+                self.handleFocusBound = self.handleFocus.bind(self);
             },
 
             /*********************************************************************/
