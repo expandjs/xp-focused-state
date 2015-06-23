@@ -1,3 +1,3 @@
 # xp-focused-state
 
-See the [`documentation page`](http://expandjs.com/elements/xp-focused-state) for more information.
+This repository **is deprected**. Use [`xp-focused-behavior`](https://github.com/expandjs/xp-focused-behavior) instead.
